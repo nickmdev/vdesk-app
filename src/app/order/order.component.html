@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="fx-container">
+    <div fxFlex.gt-xs="70" fxFlex.xs="100">
+      <main>
+        <!-- Header -->
+        <header>
+          <div fxLayoutAlign="start center" class="section-header">
+            <span>Build a <span class="bold">VDESK</span></span>
+          </div>
+        </header>
+
+        <div class="main-container" [@routeState]="getAnimationData(rOutlet)">
+          <router-outlet #rOutlet="outlet"></router-outlet>
+        </div>
+      </main>
+    </div>
+
+
+    <div fxFlex.gt-xs="30" fxHide.xs fxLayout="column" class="sidebar">
+
+      <ol class="list-group vertical-steps">
+        <li *ngFor="let step of orderSteps"
+            class="list-group-item"
+            routerLinkActive="active">
+          <span>
+            <a [routerLink]="step.route">{{step.friendlyName}}</a>
+          </span>
+        </li>
+      </ol>
+
+      <div fxFlex fxLayoutAlign="start end">
+        <order-summary fxFlex></order-summary>
+      </div>
+
+    </div>
+
+
+  </div>
+  <footer><span class="logo">VDESK</span></footer>
+</div>

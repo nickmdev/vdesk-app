@@ -1,0 +1,23 @@
+<section id="order-summary-container">
+  <div class="title"><span>Order Summary</span></div>
+  <div>
+    <div><img src="../../../assets/desk.png" alt="VDESK" class="product-image"></div>
+    <div fxFlexOffset="10px" class="sub-item">
+      <span class="sub-value">VDESK</span>
+      <br><span class="sub-label">{{ order.total | currency:'USD':'symbol':'3.0-0' }}</span>
+    </div>
+  </div>
+  <hr>
+  <div class="sub-item">
+    <div fxFlex class="sub-label">Subtotal (1 item)</div>
+    <div class="sub-value">{{ order.total | currency }}</div>
+  </div>
+  <div class="sub-item">
+    <div fxFlex class="sub-label">Shipping</div>
+    <div class="sub-value">Free!</div>
+  </div>
+  <div class="sub-item">
+    <div fxFlex class="sub-label">Tax</div>
+    <div class="sub-value">$0.00</div>
+  </div>
+</section>

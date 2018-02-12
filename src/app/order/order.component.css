@@ -1,0 +1,202 @@
+/* xs */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+  header {
+    background: #FAFAFA;
+    margin: -15px;
+    padding: 10px;
+  }
+
+  .main-container {
+    padding: 10px;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+  }
+
+}
+
+/* sm ++ */
+@media (min-width:641px) {
+  .container {
+    max-width: 800px;
+    box-shadow: 0px 5px 36px #8c8c8c63;
+    border-radius: 10px;
+    margin: 40px auto;
+  }
+
+  .fx-container {
+    margin: 0;
+    min-height: calc(70vh - 50px);
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .main-container {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  footer {
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+main {
+  padding: 15px;
+}
+
+.sidebar {
+  background: #FAFAFA;
+  padding: 0 20px;
+  border-left: 1px solid #E8E8E8;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+}
+
+.step {
+  border-radius: 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  padding: 3px;
+  margin-right: 8px;
+  background: #fff;
+  border: 1px solid #EDEDED;
+  color: #B2B5BB;
+  text-align: center;
+}
+
+.step-container.active, .step-container.active .step {
+  color: #00A2C5;
+  border-color: #00A2C5;
+  font-weight: 700;
+}
+
+.step-container {
+  height: 40px;
+  font-size: 13px;
+}
+
+footer {
+  color: white;
+  padding: 12px 15px;
+  background: #00A2C5;
+  height: 50px;
+}
+
+footer .logo {
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+
+/*Vertical Steps*/
+.list-group.vertical-steps{
+  padding-left:10px;
+  list-style: none;
+}
+.list-group.vertical-steps .list-group-item:first-child{
+  border:none;
+  border-left: 2px solid #ece5dd;
+  box-sizing:border-box;
+  border-radius:0;
+  counter-increment: step-counter;
+  padding-left:20px;
+  padding-right:0px;
+  padding-bottom:20px;
+  padding-top: 32px;
+}
+.list-group.vertical-steps .list-group-item{
+  border:none;
+  border-left: 2px solid #ece5dd;
+  box-sizing:border-box;
+  border-radius:0;
+  counter-increment: step-counter;
+  padding-left:20px;
+  padding-right:0px;
+  padding-bottom:20px;
+  padding-top:0px;
+}
+.list-group.vertical-steps .list-group-item.active{
+  background-color: transparent;
+  color:inherit;
+}
+.list-group.vertical-steps .list-group-item:last-child{
+  border-left: 2px solid transparent;
+  padding-bottom:0;
+}
+.list-group.vertical-steps .list-group-item::before {
+  border-radius: 50%;
+  border: 1px solid #E8E8E8;
+  background-color: white;
+  color: #B2B5BB;
+  content: counter(step-counter);
+  display:inline-block;
+  float:left;
+  height:25px;
+  line-height:25px;
+  margin-left:-35px;
+  text-align:center;
+  width: 25px;
+}
+.list-group.vertical-steps .list-group-item span,
+.list-group.vertical-steps .list-group-item a{
+  display: block;
+  overflow: hidden;
+  padding-top: 2px;
+  font-size: 13px;
+  text-decoration: none;
+}
+/* Active/ Completed States*/
+.list-group.vertical-steps .list-group-item.active::before{
+  background-color: white;
+  color: #00A2C5;
+  border: 1px solid #00A2C5;
+}
+.list-group.vertical-steps .list-group-item.active a {
+  color: #00A2C5;
+  font-weight: 700;
+}
+.list-group.vertical-steps .list-group-item.completed{
+  border-left: 2px solid #E8E8E8;
+}
+.list-group.vertical-steps .list-group-item.completed::before{
+  background-color: #47D776;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.list-group.vertical-steps .list-group-item.completed:last-child{
+  border-left: 2px solid #E8E8E8;
+}
+
+
+.section-header {
+  font-size: 22px;
+}
+
+.section-header .chevron:before {
+  content: '\f0da';
+  font: 20px fontawesome;
+}
+
+.section-header .text-small {
+  font-size: 14px;
+}

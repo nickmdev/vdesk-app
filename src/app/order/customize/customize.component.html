@@ -1,0 +1,44 @@
+<!-- Component -->
+<section *ngIf="product">
+
+  <div fxLayout
+       fxLayout.xs="column"
+       fxLayoutAlign.gt-xs="start"
+       class="form-group">
+    <label fxFlex.gt-xs="25">Choose a Size</label>
+      <div fxLayout
+           fxFlexOffset.gt-xs="25px"
+           fxFlexOffset.xs="10px"
+           fxLayoutGap="10px">
+        <div *ngFor="let sizeOption of product.sizeOptions"
+             class="select-box"
+             [ngClass]="{active: sizeOption.size === order.size}"
+             fxFlex
+             (click)="onSelectSize(sizeOption)">
+          <span>{{sizeOption.size}}<span class="label">inches</span></span>
+        </div>
+      </div>
+  </div>
+
+  <div fxLayout
+       fxLayout.xs="column"
+       fxLayoutAlign.gt-xs="start"
+       class="form-group">
+    <label fxFlex.gt-xs="25">Select a Color</label>
+    <div fxLayout
+         fxFlexOffset.gt-xs="25px"
+         fxFlexOffset.xs="10px"
+         fxLayoutGap="10px">
+      <div *ngFor="let colorOption of product.colorOptions"
+           class="color-box"
+           [ngClass]="{active: colorOption === order.color}"
+           (click)="onSelectColor(colorOption)">
+        <div class="{{colorOption.toLowerCase()}}"></div>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="start" class="form-group">
+    <a fxFlexOffset.gt-xs="calc(25% + 25px)" class="btn" routerLink="../payment"><span>Next </span></a>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+#order-summary-container {
+  color: #8F959B;
+  margin-bottom: 20px;
+}
+
+#order-summary-container .title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11px;
+  color: #a7a9af;
+  width: 110%;
+  border-bottom: 1px solid #ddd;
+  line-height: 0.1em;
+  margin: 20px 0;
+}
+#order-summary-container .title span {
+  background: #FAFAFA;
+  padding: 0 10px 0 0;
+}
+#order-summary-container .cart-item {
+
+}
+
+#order-summary-container .sub-item {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+#order-summary-container .sub-value {
+  color: #4d5054;
+  font-weight: bolder;
+}
+#order-summary-container hr {
+  border: 1px solid #dddddd8f;
+  margin: 10px 0;
+}
+
+.product-image {
+  width: 50px;
+}
